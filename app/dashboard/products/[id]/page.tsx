@@ -4,7 +4,7 @@ import { getProductEditData } from "@/lib/getData";
 export default async function EditProductRoute({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
   const data = await getProductEditData(id);

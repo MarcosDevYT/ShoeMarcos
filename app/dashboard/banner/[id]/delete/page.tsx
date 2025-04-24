@@ -3,7 +3,7 @@ import { DeleteBannerPage } from "@/components/dashboard/pages/banner/DeleteBann
 export default async function DeleteBannerRoute({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
   return <DeleteBannerPage id={id} />;

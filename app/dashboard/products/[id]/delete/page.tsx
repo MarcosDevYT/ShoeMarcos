@@ -3,7 +3,7 @@ import { DeleteProductPage } from "@/components/dashboard/pages/products/DeleteP
 export default async function DeleteRoute({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
 
